@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@100;300;400;500;700&display=swap');
+
+body {
+    font-family: "Roboto Condensed", sans-serif !important;
+}
+
+/******************* NAVIGATION BAR ***************************/
+.logo {
+    width: 16.25rem;  
+}
+
+/******************* MENU LINKS ***************************/
+nav a.nav-link {
+    font-weight: 500;
+    letter-spacing: 0.9px;
+    cursor: pointer;
+    border-top: 0.1875rem solid transparent; 
+    padding-top: 0.75rem; 
+    transition: color 0.3s ease, border-top-color 0.3s ease;
+}
+
+nav ul li {
+    text-transform: uppercase;
+}
+
+.navbar-nav > li > a {
+    margin-left: 0.75rem;
+    margin-right: 0.75rem;
+    color: aliceblue;
+}
+
+.navbar-nav > li > a.active, 
+.navbar-nav > li > a:focus {
+    border-top-color: #f9ab00; 
+    color: #f9ab00; 
+}
+
+.navbar {
+    display: flex;
+    align-items: center; 
+}
+
+.container-fluid {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-brand {
+    max-width: 17.25rem;
+    padding: 0 !important;
+}
+
+#hamburguer-icon {
+    color: #fff;
+}
+
+/* Ajusta la posición del botón togglebar */
+@media (max-width: 992px) {
+    .navbar-toggler {
+        align-self: center; /* Centra horizontalmente */
+        margin-top: auto;
+        margin-bottom: auto;
+        height: 100%; /* Esto asegura que el botón se mantenga centrado verticalmente */
+        display: flex;
+        align-items: center; /* Centra verticalmente dentro del botón */
+    }
+
+    /* Otros estilos necesarios para mantener el diseño */
+    .navbar-collapse {  
+        display: flex;
+        flex-direction: column;
+        position: static; 
+        width: 100%;
+        margin-top: 0.5rem;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar-nav {
+        width: 100%;
+        text-align: left;
+        padding-left: 1rem;
+    }
+
+    .collapse.show {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+    }
+}
