@@ -1,4 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@100;300;400;500;700&display=swap');
+:root {
+    --primary-white: #fff;
+    --primary-orange: #f9ab00;
+    --primary-black: rgba(255,255,255,0);
+    --primary-red: #ef4035;
+    --primary-hover-red: #f33501;
+    
+}
 
 body {
     font-family: "Roboto Condensed", sans-serif !important;
@@ -6,7 +14,7 @@ body {
 
 /******************* NAVIGATION BAR ***************************/
 .logo {
-    width: 16.25rem;  
+    width: 15rem;  
 }
 
 /******************* MENU LINKS ***************************/
@@ -26,18 +34,19 @@ nav ul li {
 .navbar-nav > li > a {
     margin-left: 0.75rem;
     margin-right: 0.75rem;
-    color: aliceblue;
+    color: var(--primary-white);
 }
 
 .navbar-nav > li > a.active, 
 .navbar-nav > li > a:focus {
-    border-top-color: #f9ab00; 
-    color: #f9ab00; 
+    border-top-color: var(--primary-orange); 
+    color: var(--primary-orange); 
 }
 
 .navbar {
     display: flex;
-    align-items: center; 
+    align-items: center;
+    z-index: 1; 
 }
 
 .container-fluid {
@@ -52,21 +61,20 @@ nav ul li {
 }
 
 #hamburguer-icon {
-    color: #fff;
+    color: var(--primary-white);
 }
 
-/* Ajusta la posición del botón togglebar */
+/******************* TOGLE BAR ***************************/
 @media (max-width: 992px) {
     .navbar-toggler {
-        align-self: center; /* Centra horizontalmente */
+        align-self: center; 
         margin-top: auto;
         margin-bottom: auto;
-        height: 100%; /* Esto asegura que el botón se mantenga centrado verticalmente */
+        height: 100%; 
         display: flex;
-        align-items: center; /* Centra verticalmente dentro del botón */
+        align-items: center; 
     }
 
-    /* Otros estilos necesarios para mantener el diseño */
     .navbar-collapse {  
         display: flex;
         flex-direction: column;
@@ -93,3 +101,65 @@ nav ul li {
         width: 100%;
     }
 }
+
+/******************* HEADER ***************************/
+.header-wraper {
+    position: relative;
+    background: url("../src/assets/background.png") no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 90vh;
+    z-index: -1;
+}
+
+.main-info {
+    display: flex;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.main-info h1 {
+    color: var(--primary-orange);
+    text-transform: uppercase;
+    margin-top: .5rem;
+    display: block;
+    
+}
+
+/******************* TYPED TEXT ***************************/
+
+/* Ajusta la posición del cursor y el texto */
+.typed-container {
+    display: inline-block;
+    font-size: 2rem;
+    color: var(--primary-white);
+  }
+  
+  .typed-text {
+    display: inline;
+  }
+
+
+  /******************* HEADER MAIN OFFER BUTTON***************************/
+.btn-main-offer {
+    border: 1px solid var(--primary-red);
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 0;
+    padding: 0.625rem 0.75rem 0.75rem  0.75rem ;
+    color: var(--primary-white);
+    margin: 2rem;
+}
+
+.btn-main-offer:hover {
+    text-decoration: underline; 
+  }
+
+  /******************* PARTICLES ***************************/  
