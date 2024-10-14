@@ -2,8 +2,8 @@ import React from 'react';
 
 const Technologies = () => {
   const technologies = [
-    { name: "React JS", imgSrc: "/public/assets/react.png" },
-    { name: "Java", imgSrc: "/public/assets/java.png" },
+    { name: "React JS", imgSrc: "./public/assets/react.png" },
+    { name: "Java", imgSrc: "./public/assets/java.png" },
     { name: "C#", imgSrc: "/public/assets/csharp.png" },
     { name: ".NET", imgSrc: "/public/assets/dotnet.png" },
     { name: "Python", imgSrc: "/public/assets/python.png" },
