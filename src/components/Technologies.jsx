@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactJS from "../../public/assets/csharp.png";
+import ReactJS from "../../public/assets/react.png";
 import Java from "../../public/assets/java.png";
 import CSharp from "../../public/assets/csharp.png";
 import DotNet from "../../public/assets/dotnet.png";
