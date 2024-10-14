@@ -2,17 +2,17 @@ import React from 'react';
 
 const Technologies = () => {
   const technologies = [
-    { name: "React JS", imgSrc: "./images/react.png" },
-    { name: "Java", imgSrc: "./images/java.png" },
-    { name: "C#", imgSrc: "./images/csharp.png" },
-    { name: ".NET", imgSrc: "./images/dotnet.png" },
-    { name: "Python", imgSrc: "./images/python.png" },
-    { name: "React Vite", imgSrc: "./images/vite.png" },
-    { name: "Spring Boot", imgSrc: "./images/spring.png" },
-    { name: "MongoDB", imgSrc: "./images/mongodb.png" },
-    { name: "SQL", imgSrc: "./images/sql.png" },
-    { name: "MySQL", imgSrc: "./images/mysql.png" },
-    { name: "Visual Studio", imgSrc: "./images/visualstudio.png" }
+    { name: "React JS", imgSrc: "/src/components/images/react.png" },
+    { name: "Java", imgSrc: "/src/components/images/java.png" },
+    { name: "C#", imgSrc: "/src/components/images/csharp.png" },
+    { name: ".NET", imgSrc: "/src/components/images/dotnet.png" },
+    { name: "Python", imgSrc: "/src/components/images/python.png" },
+    { name: "React Vite", imgSrc: "/src/components/images/vite.png" },
+    { name: "Spring Boot", imgSrc: "/src/components/images/spring.png" },
+    { name: "MongoDB", imgSrc: "/src/components/images/mongodb.png" },
+    { name: "SQL", imgSrc: "/src/components/images/sql.png" },
+    { name: "MySQL", imgSrc: "/src/components/images/mysql.png" },
+    { name: "Visual Studio", imgSrc: "/src/components/images/visualstudio.png" }
   ];
 
   console.log("cargando foto ",technologies[0].imgSrc );
