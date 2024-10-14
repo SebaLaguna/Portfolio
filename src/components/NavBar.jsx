@@ -1,14 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import logo from "../../src/assets/logo.png";
-// imports de react fontawesome
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 
 const NavBar = () => {
+  const [activeLink, setActiveLink] = useState("#home"); // Estado para manejar el enlace activo
+
+  const handleLinkClick = (link) => {
+    setActiveLink(link); // Actualiza el enlace activo al hacer clic
+  };
+
   return (
     <nav className="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
       <div className="container-fluid">
-        <a className="navbar-brand" href="#">
+        <a className="navbar-brand" href="#home">
           <img className="logo" src={logo} alt="logo" />
         </a>
         <button
@@ -24,24 +29,18 @@ const NavBar = () => {
         </button>
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
-            <li className="nav-item">
-              <a className="nav-link" aria-current="page" href="#">Home</a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#">About Me</a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#">Services</a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#">How Work</a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#">Portfolio</a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#">Contact</a>
-            </li>
+            {["#home", "#about", "#services", "#technologies", "#portfolio", "#contact"].map((link) => (
+              <li className="nav-item" key={link}>
+                <a
+                  className={`nav-link ${activeLink === link ? 'active' : ''}`} 
+                  aria-current={activeLink === link ? "page" : undefined}
+                  href={link}
+                  onClick={() => handleLinkClick(link)} 
+                >
+                  {link.substring(1).charAt(0).toUpperCase() + link.substring(2)} 
+                </a>
+              </li>
+            ))}
           </ul>
         </div>
       </div>
