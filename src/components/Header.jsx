@@ -1,6 +1,5 @@
 import React from "react";
 import { Typewriter } from 'react-simple-typewriter';
-import { Button } from 'react-bootstrap';
 
 const Header = ({ children }) => {
   const handleScrollToContact = () => {

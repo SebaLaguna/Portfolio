@@ -1,27 +1,36 @@
 import React from 'react';
+import ReactJS from "../../public/assets/csharp.png";
+import Java from "../../public/assets/java.png";
+import CSharp from "../../public/assets/csharp.png";
+import DotNet from "../../public/assets/dotnet.png";
+import Python from "../../public/assets/python.png";
+import Vite from "../../public/assets/vite.png";
+import SpringBoot from "../../public/assets/spring.png";
+import MongoDB from "../../public/assets/mongodb.png";
+import SQL from "../../public/assets/sql.png";
+import MySQL from "../../public/assets/mysql.png";
+import VisualStudio from "../../public/assets/visualstudio.png";
+
+const technologies = [
+  { name: "React JS", imgSrc: ReactJS },
+  { name: "Java", imgSrc: Java },
+  { name: "C#", imgSrc: CSharp },
+  { name: ".NET", imgSrc: DotNet },
+  { name: "Python", imgSrc: Python },
+  { name: "React Vite", imgSrc: Vite },
+  { name: "Spring Boot", imgSrc: SpringBoot },
+  { name: "MongoDB", imgSrc: MongoDB },
+  { name: "SQL", imgSrc: SQL },
+  { name: "MySQL", imgSrc: MySQL },
+  { name: "Visual Studio", imgSrc: VisualStudio }
+];
 
 const Technologies = () => {
-  const technologies = [
-    { name: "React JS", imgSrc: "/public/assets/react.png" },
-    { name: "Java", imgSrc: "/public/assets/java.png" },
-    { name: "C#", imgSrc: "/public/assets/csharp.png" },
-    { name: ".NET", imgSrc: "/public/assets/dotnet.png" },
-    { name: "Python", imgSrc: "/public/assets/python.png" },
-    { name: "React Vite", imgSrc: "/public/assets/vite.png" },
-    { name: "Spring Boot", imgSrc: "/public/assets/spring.png" },
-    { name: "MongoDB", imgSrc: "/public/assets/mongodb.png" },
-    { name: "SQL", imgSrc: "/public/assets/sql.png" },
-    { name: "MySQL", imgSrc: "/public/assets/mysql.png" },
-    { name: "Visual Studio", imgSrc: "/public/assets/visualstudio.png" }
-  ];
-
-  console.log("cargando foto ",technologies[0].imgSrc );
   return (
-    <div className="technologies-container text-center" id='technologies'>
+    <div className="technologies-container text-center" id="technologies">
       <h2 className="text-orange">Technologies</h2>
       <div className="icon-container">
         {technologies.map((tech, index) => (
-            
           <div className="tech-icon" key={index}>
             <img src={tech.imgSrc} alt={tech.name} className="icon" />
             <span className="icon-label">{tech.name}</span>
