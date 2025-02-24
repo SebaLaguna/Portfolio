@@ -13,7 +13,7 @@ const Header = ({ children }) => {
     <div className="header-wraper" id="home">
       {children} 
       <div className="main-info">
-        <h1>Backend Developer</h1>
+        <h1>Software Developer</h1>
         <div className="typed-container">
           <Typewriter
             className="typed-text"
